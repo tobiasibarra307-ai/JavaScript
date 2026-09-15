@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Bucle Do-While</title>
+</head>
+<body>
+
+    <script>
+        // Inicialización: se crea la variable de control 'count' iniciada en 0
+        let count = 0;
+
+        // Imprime el mensaje inicial con un salto de línea
+        document.write("Starting Loop" + "<br />");
+
+        // Bucle do-while: a diferencia del 'while' simple, este bloque se ejecuta al menos una vez 
+        // ANTES de evaluar la condición al final
+        do {
+            // Imprime el valor actual del contador
+            document.write("Current Count : " + count + "<br />");
+            
+            // Incrementa el valor de 'count' en 1 en cada iteración
+            count++;
+            
+        } while (count < 5); // Evalúa la condición. Si es verdadera (count < 5), repite el bloque 'do'
+
+        // Se ejecuta cuando la condición (count < 5) pasa a ser falsa (cuando count llega a 5)
+        document.write("Loop stopped!");
+    </script>
+
+    <p>Set the variable to different value and then try...</p>
+</body>
+</html>
