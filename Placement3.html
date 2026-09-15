@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica de la página -->
+  <meta charset="UTF-8">
+  <title>JavaScript en Head y Body</title>
+
+  <!-- Función declarada en el head para ser llamada más tarde -->
+  <script>
+    // Se ejecuta únicamente cuando el usuario hace clic en el botón
+    function sayHello() {
+      alert("Hello World");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Elemento para insertar texto de forma dinámica sin usar document.write -->
+  <p id="mensaje"></p>
+
+  <!-- Botón que activa la función definida en el head -->
+  <input type="button" onclick="sayHello()" value="Say Hello" />
+
+  <!-- Script que se ejecuta automáticamente al cargar el cuerpo de la página -->
+  <script>
+    // Muestra el mensaje directamente en el contenedor
+    document.getElementById("mensaje").textContent = "Hello World";
+  </script>
+
+</body>
+</html>
