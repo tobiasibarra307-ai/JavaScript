@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración de caracteres especiales y título de la página -->
+  <meta charset="UTF-8">
+  <title>JavaScript en Body</title>
+</head>
+<body>
+
+  <!-- Elemento donde insertaremos el texto dinámicamente -->
+  <p id="mensaje"></p>
+
+  <!-- Parrafo con texto estático -->
+  <p>This is web page body</p>
+
+  <!-- Script colocado al final del body para no bloquear la carga del HTML -->
+  <script>
+    // Selecciona el elemento por su ID y le asigna el texto de forma segura
+    document.getElementById("mensaje").textContent = "Hello World";
+  </script>
+
+</body>
+</html>
