@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Operador Condicional en JavaScript</title>
+</head>
+<body>
+
+    <p>Abre la consola del navegador (F12) para ver los resultados de este ejemplo.</p>
+    
+    <p>Set the variables to different values and different operators and then try...</p>
+
+    <script>
+        // --- INICIALIZACIÓN DE VARIABLES ---
+        // 'let' es la forma moderna de declarar variables (reemplaza a 'var')
+        let a = 10;
+        let b = 20;
+        let result; // Variable para guardar el resultado de la condición
+
+        // --- EXPLICACIÓN DEL OPERADOR CONDICIONAL (TERNARIO) ---
+        // Sintaxis: (condición) ? valor_si_es_verdadero : valor_si_es_falso
+        // Funciona como un 'if...else' pero en una sola línea.
+
+        // --- PRIMER CASO DE PRUEBA ---
+        // Condición: ¿Es 'a' mayor que 'b'? (¿10 > 20?)
+        
+        // Primero, imprimimos la expresión para saber qué estamos evaluando.
+        // Usamos console.log() en lugar de document.write() para una depuración más limpia.
+        console.log("Evaluando: ((a > b) ? 100 : 200)");
+
+        // Aquí se ejecuta la operación:
+        // Como 10 NO es mayor que 20, la condición es FALSA.
+        // Por lo tanto, se elige el valor después de los dos puntos (':').
+        result = (a > b) ? 100 : 200; // 'result' tomará el valor 200
+
+        // Imprimimos el resultado final en la consola.
+        console.log("=> Resultado: " + result);
+        console.log("-------------------"); // Línea separadora
+
+
+        // --- SEGUNDO CASO DE PRUEBA ---
+        // Condición: ¿Es 'a' menor que 'b'? (¿10 < 20?)
+        
+        // Imprimimos la nueva expresión.
+        console.log("Evaluando: ((a < b) ? 100 : 200)");
+
+        // Aquí se ejecuta la operación:
+        // Como 10 SÍ es menor que 20, la condición es VERDADERA.
+        // Por lo tanto, se elige el valor después del signo de interrogación ('?').
+        result = (a < b) ? 100 : 200; // 'result' tomará el valor 100
+
+        // Imprimimos el resultado final en la consola.
+        console.log("=> Resultado: " + result);
+
+    </script>
+</body>
+</html>
