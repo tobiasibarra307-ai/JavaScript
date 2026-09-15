@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de Asignación en JavaScript</title>
+    <style>
+        /* Un poco de estilo para que los resultados se vean mejor */
+        body { font-family: sans-serif; padding: 20px; }
+        #resultados { border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9; max-width: 400px;}
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor donde mostraremos los resultados de los cálculos -->
+    <div id="resultados"></div>
+
+    <p>Establece las variables con diferentes valores y diferentes operadores y luego prueba...</p>
+
+    <script>
+        // --- INICIALIZACIÓN DE VARIABLES ---
+        // 'let' es la forma moderna de declarar variables (reemplaza a 'var')
+        let a = 33;
+        let b = 10;
+        let result; // Variable para guardar el resultado intermedio de cada operación
+
+        // Referencia al elemento HTML donde escribiremos los resultados
+        const contenedorResultados = document.getElementById('resultados');
+
+        // Función auxiliar para imprimir texto en la página de forma limpia
+        function imprimirResultado(texto) {
+            contenedorResultados.innerHTML += texto + "<br />";
+        }
+
+        // --- INICIO DE OPERACIONES DE ASIGNACIÓN ---
+
+        // 1. ASIGNACIÓN SIMPLE (=)
+        // Explicación: Asigna el valor del operando derecho al operando izquierdo.
+        // Aquí 'a' toma el valor actual de 'b', que es 10.
+        imprimirResultado("Value of a => (a = b) => ");
+        result = (a = b); // 'a' ahora vale 10, y 'result' también
+        imprimirResultado(result);
+
+
+        // 2. ASIGNACIÓN DE ADICIÓN (+=)
+        // Explicación: Suma el valor de la derecha a la variable y asigna el resultado a la variable.
+        // Equivale a: a = a + b.
+        // Ahora 'a' vale 10. Operación: a = 10 + 10 = 20.
+        imprimirResultado("Value of a => (a += b) => ");
+        result = (a += b); // 'a' ahora vale 20
+        imprimirResultado(result);
+
+
+        // 3. ASIGNACIÓN DE SUSTRACCIÓN (-=)
+        // Explicación: Resta el valor de la derecha de la variable y asigna el resultado a la variable.
+        // Equivale a: a = a - b.
+        // Ahora 'a' vale 20. Operación: a = 20 - 10 = 10.
+        imprimirResultado("Value of a => (a -= b) => ");
+        result = (a -= b); // 'a' ahora vale 10
+        imprimirResultado(result);
+
+
+        // 4. ASIGNACIÓN DE MULTIPLICACIÓN (*=)
+        // Explicación: Multiplica la variable por el valor de la derecha y asigna el resultado a la variable.
+        // Equivale a: a = a * b.
+        // Ahora 'a' vale 10. Operación: a = 10 * 10 = 100.
+        imprimirResultado("Value of a => (a *= b) => ");
+        result = (a *= b); // 'a' ahora vale 100
+        imprimirResultado(result);
+
+
+        // 5. ASIGNACIÓN DE DIVISIÓN (/=)
+        // Explicación: Divide la variable por el valor de la derecha y asigna el resultado a la variable.
+        // Equivale a: a = a / b.
+        // Ahora 'a' vale 100. Operación: a = 100 / 10 = 10.
+        imprimirResultado("Value of a => (a /= b) => ");
+        result = (a /= b); // 'a' ahora vale 10
+        imprimirResultado(result);
+
+
+        // 6. ASIGNACIÓN DE RESIDUO/MÓDULO (%=)
+        // Explicación: Divide la variable por el valor de la derecha y asigna el *residuo* de la división a la variable.
+        // Equivale a: a = a % b.
+        // Ahora 'a' vale 10. Operación: 10 % 10. Como 10 cabe exactamente en 10, el residuo es 0.
+        imprimirResultado("Value of a => (a %= b) => ");
+        result = (a %= b); // 'a' ahora vale 0
+        imprimirResultado(result);
+
+    </script>
+</body>
+</html>
