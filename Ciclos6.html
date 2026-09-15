@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Control de Bucles con Continue</title>
+</head>
+<body>
+
+    <script>
+        // Declaración moderna de variable con 'let' en lugar de 'var'
+        let x = 1;
+
+        // Imprime el mensaje inicial antes de entrar al bucle
+        document.write("Entering the loop<br /> ");
+
+        // Bucle while: se evalúa mientras x sea menor a 10
+        while (x < 10) {
+            
+            // Incremento del contador al inicio de la vuelta (x pasa a ser x + 1)
+            x = x + 1;
+
+            // Evaluamos si el contador llegó a 5
+            if (x == 5) {
+                // Sentencia continue: salta el resto del cuerpo del bucle SÓLO en esta iteración.
+                // Evita que se ejecute el document.write de abajo y pasa directamente a evaluar 
+                // la condición de la siguiente vuelta del while.
+                continue; 
+            }
+
+            // Imprime el valor de x. Se ejecutará para todos los números excepto el 5.
+            document.write(x + "<br />");
+        }
+
+        // Mensaje final que indica la salida del bucle al terminar las iteraciones
+        document.write("Exiting the loop!<br /> ");
+    </script>
+
+    <p>Set the variable to different value and then try...</p>
+</body>
+</html>
