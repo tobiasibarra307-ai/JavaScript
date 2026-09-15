@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Switch Case</title>
+</head>
+<body>
+
+    <!-- Estructura HTML moderna sin etiquetas obsoletas de JavaScript -->
+    <script>
+        // Declaración de variable con 'let' (estándar moderno)
+        let grade = 'A';
+
+        // Mensaje inicial antes de evaluar el bloque condicional
+        document.write("Entering switch block<br />");
+
+        // Estructura switch: evalúa el valor exacto de la variable 'grade'
+        switch (grade) {
+            case 'A':
+                // Se ejecuta si grade === 'A'
+                document.write("Good job<br />");
+                break; // Corta la ejecución para no evaluar los siguientes casos
+
+            case 'B':
+                // Se ejecuta si grade === 'B'
+                document.write("Pretty good<br />");
+                break;
+
+            case 'C':
+                // Se ejecuta si grade === 'C'
+                document.write("Passed<br />");
+                break;
+
+            case 'D':
+                // Se ejecuta si grade === 'D'
+                document.write("Not so good<br />");
+                break;
+
+            case 'F':
+                // Se ejecuta si grade === 'F'
+                document.write("Failed<br />");
+                break;
+
+            default:
+                // Caso por defecto: se ejecuta si 'grade' no coincide con ninguna opción anterior
+                document.write("Unknown grade<br />");
+        }
+
+        // Mensaje final tras salir del bloque switch
+        document.write("Exiting switch block");
+    </script>
+
+    <p>Set the variable to different value and then try...</p>
+</body>
+</html>
