@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Bucle For</title>
+</head>
+<body>
+
+    <script>
+        // Corrección: Uso de 'let' en lugar de 'var' para declarar la variable de control
+        let count;
+
+        // Imprime el mensaje inicial con un salto de línea
+        document.write("Starting Loop" + "<br />");
+
+        // Bucle for: agrupa la inicialización (count = 0), la condición (count < 10) 
+        // y el incremento (count++) en una sola línea
+        for (count = 0; count < 10; count++) {
+            // Imprime el valor actual del contador en cada vuelta
+            document.write("Current Count : " + count);
+            
+            // Imprime el salto de línea para separar cada registro
+            document.write("<br />");
+        }
+
+        // Mensaje final que se ejecuta al terminar las 10 iteraciones
+        document.write("Loop stopped!");
+    </script>
+
+    <p>Set the variable to different value and then try...</p>
+</body>
+</html>
