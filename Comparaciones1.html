@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Operadores de Comparación</title>
+</head>
+<body>
+
+  <!-- Contenedor donde se insertarán los resultados dinámicamente -->
+  <div id="salida"></div>
+
+  <p>Set the variables to different values and different operators and then try...</p>
+
+  <script>
+    // Variables base para realizar las comparaciones
+    let a = 10;
+    let b = 20;
+
+    // Variable declarada para almacenar el valor booleano (true/false) de cada prueba
+    let result;
+
+    // Referencia al elemento contenedor del documento
+    const contenedor = document.getElementById("salida");
+
+    // 1. IGUALDAD (==)
+    // Compara si 'a' es igual a 'b'. Como 10 no es igual a 20, devuelve false.
+    result = (a == b);
+    contenedor.innerHTML += "(a == b) => " + result + "<br />";
+
+    // 2. MENOR QUE (<)
+    // Evalúa si 'a' es estrictamente menor que 'b'. Como 10 es menor que 20, devuelve true.
+    result = (a < b);
+    contenedor.innerHTML += "(a < b) => " + result + "<br />";
+
+    // 3. MAYOR QUE (>)
+    // Evalúa si 'a' es estrictamente mayor que 'b'. Como 10 no es mayor que 20, devuelve false.
+    result = (a > b);
+    contenedor.innerHTML += "(a > b) => " + result + "<br />";
+
+    // 4. DESIGUALDAD / DISTINTO (!=)
+    // Verifica si 'a' es diferente de 'b'. Como 10 y 20 son distintos, devuelve true.
+    result = (a != b);
+    contenedor.innerHTML += "(a != b) => " + result + "<br />";
+
+    // 5. MAYOR O IGUAL QUE (>=)
+    // Revisa si 'a' es mayor o al menos igual a 'b'. Como 10 no cumple ninguna, devuelve false.
+    result = (a >= b);
+    contenedor.innerHTML += "(a >= b) => " + result + "<br />";
+
+    // 6. MENOR O IGUAL QUE (<=)
+    // Revisa si 'a' es menor o igual a 'b'. Como 10 es menor que 20, cumple la condición y devuelve true.
+    result = (a <= b);
+    contenedor.innerHTML += "(a <= b) => " + result + "<br />";
+  </script>
+
+</body>
+</html>
