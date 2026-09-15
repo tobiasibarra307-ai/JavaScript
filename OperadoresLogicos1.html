@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores Lógicos en JavaScript</title>
+    <style>
+        /* Un poco de estilo para que los resultados se lean mejor */
+        body { font-family: sans-serif; padding: 20px; }
+        #resultados { border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; width: fit-content;}
+    </style>
+</head>
+<body>
+
+    <p>Revisa el siguiente código para aprender cómo implementar Operadores Lógicos en JavaScript.</p>
+    
+    <!-- Contenedor donde mostraremos los resultados -->
+    <div id="resultados"></div>
+
+    <p>Establece las variables con diferentes valores y diferentes operadores y luego prueba...</p>
+
+    <script>
+        // Declaración de variables de prueba (Booleanas: true o false)
+        // Usamos 'let' que es más moderno y seguro que 'var'.
+        let a = true;
+        let b = false;
+
+        // Referencia al elemento HTML donde escribiremos
+        const contenedorResultados = document.getElementById('resultados');
+
+        // Función auxiliar para imprimir en pantalla de forma limpia
+        function imprimirResultado(expresion, valor) {
+            contenedorResultados.innerHTML += `<b>${expresion}</b> => ${valor}<br />`;
+        }
+
+        // --- INICIO DE OPERACIONES LÓGICAS ---
+
+        // 1. OPERADOR AND LÓGICO ( && )
+        // Explicación: Este operador devuelve 'true' SÓLO si AMBAS condiciones son true.
+        // En este caso: (true && false) resulta en false.
+        let result = (a && b);
+        imprimirResultado("(a && b)", result);
+
+
+        // 2. OPERADOR OR LÓGICO ( || )
+        // Explicación: Este operador devuelve 'true' si AL MENOS UNA de las condiciones es true.
+        // En este caso: (true || false) resulta en true porque 'a' es true.
+        result = (a || b);
+        imprimirResultado("(a || b)", result);
+
+
+        // 3. OPERADOR NOT LÓGICO ( ! ) combinado
+        // Explicación: El operador '!' invierte el valor lógico (true pasa a false, false pasa a true).
+        // Primero se evalúa (a && b), que ya vimos que da false.
+        // Luego, el '!' invierte ese false, por lo que el resultado final es true.
+        result = (!(a && b));
+        imprimirResultado("(!(a && b))", result);
+
+    </script>
+</body>
+</html>
