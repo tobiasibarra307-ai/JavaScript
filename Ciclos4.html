@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Bucle For-In</title>
+</head>
+<body>
+
+    <script>
+        // Imprime el encabezado antes de recorrer el objeto
+        document.write("Navigator Object Properties<br /> ");
+
+        // Bucle for...in: se utiliza para iterar sobre las propiedades enumerables de un objeto.
+        // Se declara 'aProperty' directamente en la cabecera usando 'const' (o 'let').
+        for (const aProperty in navigator) {
+            // Imprime el nombre de la propiedad actual del objeto 'navigator'
+            document.write(aProperty);
+            
+            // Salto de línea para separar cada propiedad en la lista
+            document.write("<br />");
+        }
+
+        // Mensaje final que indica la salida del bucle
+        document.write("Exiting from the loop!");
+    </script>
+
+    <p>Set the variable to different object and then try...</p>
+</body>
+</html>
