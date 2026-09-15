@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Sentencia if-else en JavaScript</title>
+    <style>
+        /* Un poco de estilo para que el resultado se lea mejor */
+        body { font-family: sans-serif; padding: 20px; }
+        #resultados { border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; width: fit-content;}
+    </style>
+</head>
+<body>
+
+    <p>Revisa el siguiente código para aprender cómo implementar una sentencia if-else en JavaScript.</p>
+    
+    <!-- Contenedor donde mostraremos el resultado dinámicamente -->
+    <div id="resultados"></div>
+
+    <p>Establece la variable con un valor diferente y luego prueba...</p>
+
+    <script>
+        // --- INICIALIZACIÓN DE VARIABLES ---
+        
+        // Declaramos la variable 'age' (edad) y le asignamos un valor de prueba (15).
+        // Usamos 'let' que es más moderno y seguro que 'var'.
+        let age = 15;
+
+        // Referencia al elemento HTML donde escribiremos el resultado
+        const contenedorResultados = document.getElementById('resultados');
+
+        // --- EXPLICACIÓN DE LA SENTENCIA if-else ---
+        // La sintaxis es:
+        // if (condición) { // Código que se ejecuta si la condición es verdadera (true) }
+        // else { // Código que se ejecuta si la condición es falsa (false) }
+
+        // --- EVALUACIÓN DE LA CONDICIÓN ---
+        // Condición: ¿Es el valor de 'age' estrictamente mayor que 18? (¿15 > 18?)
+        
+        // Se ejecuta la operación lógica:
+        // Como 15 NO es mayor que 18, la condición es FALSA.
+        if( age > 18 ) {
+            // Este bloque de código SÓLO se ejecutaría si la condición fuera verdadera (true).
+            
+            // Usamos innerHTML para insertar contenido en un elemento específico.
+            // Texto en negrita (usando <b></b>) para indicar que califica.
+            contenedorResultados.innerHTML = "<b>Qualifies for driving</b>";
+        }
+        else {
+            // Este bloque de código SE EJECUTA SIEMPRE que la condición del 'if' sea falsa (false).
+            
+            // Insertamos el texto en negrita indicando que no califica.
+            contenedorResultados.innerHTML = "<b>Does not qualify for driving</b>";
+        }
+
+    </script>
+</body>
+</html>
