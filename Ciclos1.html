@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Bucle While</title>
+</head>
+<body>
+
+    <script>
+        // Inicialización del contador: se define la variable controladora en 0
+        let count = 0;
+
+        // Imprime el mensaje inicial en el documento antes de entrar al bucle
+        document.write("Starting Loop ");
+
+        // Bucle while: evalúa si la condición (count < 10) es verdadera antes de cada iteración
+        while (count < 10) {
+            // Imprime el valor actual de la variable 'count' seguido de un salto de línea
+            document.write("Current Count : " + count + "<br />");
+            
+            // Incremento: aumenta 'count' en 1 en cada vuelta para evitar un bucle infinito
+            count++;
+        }
+
+        // Mensaje final que se ejecuta una vez que 'count' llega a 10 y la condición resulta falsa
+        document.write("Loop stopped!");
+    </script>
+
+    <p>Set the variable to different value and then try...</p>
+</body>
+</html>
