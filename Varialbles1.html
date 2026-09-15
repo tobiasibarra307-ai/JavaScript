@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Variables1</title>
+</head>
+<body>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Declaración e Inicialización de Variables</h1>
+    <p>Esta página muestra los valores asignados a las variables dentro del pie de página.</p>
+  </main>
+
+  <!-- Pie de página con el código JavaScript -->
+  <footer>
+    <hr>
+    <h3>Valores de las variables (Pie de página):</h3>
+    
+    <!-- Elementos donde se mostrarán los datos -->
+    <p><strong>Nombre:</strong> <span id="nombre-usuario"></span></p>
+    <p><strong>Dinero:</strong> <span id="monto-dinero"></span></p>
+
+    <!-- Código JavaScript interno -->
+    <script>
+      let name = "Ali";
+      let money;
+      money = 2000.50;
+
+      document.getElementById("nombre-usuario").textContent = name;
+      document.getElementById("monto-dinero").textContent = money;
+    </script>
+  </footer>
+
+</body>
+</html>
