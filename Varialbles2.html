@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alcance de Variables en JavaScript</title>
+</head>
+<body>
+
+  <!-- Elemento donde mostraremos el resultado en pantalla -->
+  <p>Resultado: <span id="resultado"></span></p>
+
+  <script>
+    // Variable global: está disponible en todo el código
+    let myVar = "global"; 
+
+    function checkscope() {
+      // Variable local: solo existe dentro de esta función.
+      // Al llamarse igual que la global, la "oculta" mientras estemos aquí dentro.
+      let myVar = "local"; 
+
+      // Retornamos el valor de la variable local
+      return myVar;
+    }
+
+    // Ejecutamos la función y escribimos su resultado ("local") en el HTML
+    document.getElementById("resultado").textContent = checkscope();
+  </script>
+
+</body>
+</html>
