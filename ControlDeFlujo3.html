@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Análisis de Código if-else de Libros</title>
+</head>
+<body>
+
+  <!-- Sección de Script JavaScript principal -->
+  <script type="text/javascript">
+    <!-- Este bloque de comentario HTML ocultaba el script de navegadores muy antiguos (ya obsoleto, pero se mantiene como en el original) -->
+
+    // -- INICIALIZACIÓN DE LA VARIABLE PRINCIPAL --
+    // Paso 1: Creamos una variable 'book' (libro) y le asignamos un valor inicial.
+    // Actualmente, su valor es "maths". Prueba cambiar este valor por otro tema.
+    var book = "maths";
+
+    // -- COMIENZO DE LA ESTRUCTURA CONDICIONAL 'if-else if-else' --
+
+    // Intento 1: ¿Es el libro de historia?
+    if( book == "history" ){
+      // NO. La variable 'book' es "maths", no "history". Así que esta condición es FALSA.
+      document.write("<b>History Book</b>");
+    }
+
+    // Intento 2: ¿Es el libro de matemáticas?
+    else if( book == "maths" ){
+      // ¡SÍ! La condición es VERDADERA porque 'book' contiene "maths".
+      // Se ejecuta ESTE bloque de código.
+      document.write("<b>Maths Book</b>");
+      
+      // Una vez que una condición es verdadera y se ejecuta su bloque, 
+      // JavaScript sale de toda la estructura 'if-else if-else'.
+      // Ninguna otra condición de abajo se evalúa.
+    }
+
+    // Intento 3 (SE OMITE): ¿Es el libro de economía?
+    else if( book == "economics" ){
+      document.write("<b>Economics Book</b>");
+    }
+
+    // Paso Final (CASO POR DEFECTO - SE OMITE):
+    // El bloque 'else' es el que se ejecutaría si NINGUNA de las condiciones anteriores fuera verdadera.
+    else{
+      document.write("<b>Unknown Book</b>");
+    }
+
+    // -- FIN DE LA ESTRUCTURA CONDICIONAL --
+
+    // -->  Cierre del bloque de comentario HTML antiguo
+  </script>
+
+  <!-- Párrafo de instrucción de texto simple que ya estaba en el HTML -->
+  <p>Set the variable to different value and then try...</p>
+
+</body>
+</html>
