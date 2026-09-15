@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Etiquetas (Labels) con Break</title>
+</head>
+<body>
+
+    <script>
+        // Imprime el mensaje inicial
+        document.write("Entering the loop!<br /> ");
+
+        // Definición de la etiqueta (label) 'outerloop' para identificar el bucle externo
+        outerloop: 
+        for (let i = 0; i < 5; i++) {
+            
+            // Imprime el número del bucle externo actual
+            document.write("Outerloop: " + i + "<br />");
+
+            // Definición de la etiqueta 'innerloop' para el bucle interno
+            innerloop:
+            for (let j = 0; j < 5; j++) {
+
+                // Si j es mayor a 3, rompe el bucle interno actual (por defecto)
+                if (j > 3) break;
+
+                // Si i es igual a 2, rompe explícitamente el bucle identificado como 'innerloop'
+                if (i == 2) break innerloop;
+
+                // Si i es igual a 4, rompe el bucle principal/externo ('outerloop') por completo
+                if (i == 4) break outerloop;
+
+                // Imprime el valor de j en el bucle interno
+                document.write("Innerloop: " + j + " <br />");
+            }
+        }
+
+        // Mensaje final tras salir de los bucles
+        document.write("Exiting the loop!<br /> ");
+    </script>
+
+</body>
+</html>
