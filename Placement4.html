@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Le avisa al navegador qué tipo de letras y caracteres usar para que no se rompan los acentos -->
+  <meta charset="UTF-8">
+  <title>Conectar JavaScript Externo</title>
+
+  <!-- Vinculamos el archivo externo de JavaScript. Usamos "defer" para que la página 
+       cargue primero todo el contenido visual antes de ejecutar las instrucciones del código. -->
+  <script src="filename.js" defer></script>
+</head>
+<body>
+
+  <!-- Un mensaje sencillo dentro de la página para que no quede vacía -->
+  <p>Haz clic en el botón para probar la función externa:</p>
+
+  <!-- Botón que, al hacerle clic, busca y ejecuta la orden que guardamos en el archivo externo -->
+  <button onclick="sayHello()">Say Hello</button>
+
+</body>
+</html>  
+
+ // Creamos una lista de instrucciones (función) llamada "sayHello".
+// Esta función se queda guardada en silencio hasta que alguien o algo la llame.
+function sayHello() {
+  
+  // Muestra una pequeña ventana emergente en la pantalla del usuario con el mensaje "Hello World"
+  alert("Hello World");
+  
+}
