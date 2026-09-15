@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo del Operador typeof en JavaScript</title>
+    <style>
+        /* Un poco de estilo para que los resultados se vean mejor */
+        body { font-family: sans-serif; padding: 20px; }
+        #resultados { border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9; width: fit-content; margin-bottom: 15px;}
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor donde mostraremos los resultados dinámicamente -->
+    <div id="resultados"></div>
+
+    <p>Establece las variables con diferentes valores y diferentes operadores y luego prueba...</p>
+
+    <script>
+        // --- DECLARACIÓN DE VARIABLES DE PRUEBA ---
+        
+        // Declaramos variables con diferentes tipos de datos.
+        // Usamos 'let' que es más moderno y seguro que 'var'.
+        let a = 10;          // Tipo de dato: Number (Numérico)
+        let b = "String";    // Tipo de dato: String (Texto)
+        let result;          // Variable para guardar el resultado de cada prueba
+
+        // Referencia al elemento HTML contenedor donde escribiremos
+        const contenedorResultados = document.getElementById('resultados');
+
+        // Función auxiliar para imprimir resultados en la página de forma limpia
+        function imprimir(expresion, valorFinal) {
+            contenedorResultados.innerHTML += `<b>${expresion}</b> => ${valorFinal}<br />`;
+        }
+
+        // --- PRUEBA 1: Evaluando la variable 'b' ("String") ---
+
+        // Explicación: El operador 'typeof' devuelve una cadena de texto con el tipo de dato.
+        // Aquí: typeof b evaluará a la cadena "string".
+        // La condición (typeof b == "string") es VERDADERA.
+        // El operador ternario elige la opción antes de los dos puntos.
+        result = (typeof b == "string" ? "B is String" : "B is Numeric");
+
+        // Imprimimos el resultado en la pantalla
+        imprimir("Evaluar 'b'", result);
+
+
+        // --- PRUEBA 2: Evaluando la variable 'a' (10) ---
+
+        // Explicación:typeof a evaluará a la cadena "number".
+        // La condición (typeof a == "string") es FALSA porque "number" no es igual a "string".
+        // El operador ternario elige la opción *después* de los dos puntos.
+        result = (typeof a == "string" ? "A is String" : "A is Numeric");
+
+        // Imprimimos el resultado en la pantalla
+        imprimir("Evaluar 'a'", result);
+
+    </script>
+</body>
+</html>
