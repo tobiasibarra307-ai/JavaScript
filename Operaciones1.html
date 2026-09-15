@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Operadores Aritméticos</title>
+</head>
+<body>
+
+  <!-- Contenedor donde mostraremos todos los resultados -->
+  <div id="salida"></div>
+
+  <script>
+    // Variables iniciales de prueba
+    let a = 33;
+    let b = 10;
+    let c = "Test";
+
+    // Declaramos la variable donde guardaremos el resultado de cada cálculo
+    let result;
+
+    // Guardamos la referencia al elemento HTML para escribir en él fácilmente
+    const contenedor = document.getElementById("salida");
+
+    // 1. SUMA (+)
+    // Suma dos valores numéricos: 33 + 10 = 43
+    result = a + b;
+    contenedor.innerHTML += "a + b = " + result + "<br />";
+
+    // 2. RESTA (-)
+    // Resta el segundo valor al primero: 33 - 10 = 23
+    result = a - b;
+    contenedor.innerHTML += "a - b = " + result + "<br />";
+
+    // 3. DIVISIÓN (/)
+    // Divide el primer valor entre el segundo: 33 / 10 = 3.3
+    result = a / b;
+    contenedor.innerHTML += "a / b = " + result + "<br />";
+
+    // 4. MÓDULO O RESIDUO (%)
+    // Devuelve el resto de la división entera entre 33 y 10 (33 dividido 10 es 3, y sobran 3)
+    result = a % b;
+    contenedor.innerHTML += "a % b = " + result + "<br />";
+
+    // 5. CONCATENACIÓN CON TEXTO (+ con strings)
+    // Al sumar números con texto, JavaScript convierte todo a texto y los une: "3310Test"
+    result = a + b + c;
+    contenedor.innerHTML += "a + b + c = " + result + "<br />";
+
+    // 6. INCREMENTO (++)
+    // a++ aumenta el valor de 'a' en 1 (pasa de 33 a 34).
+    // Usamos el valor y luego se incrementa.
+    result = a++;
+    contenedor.innerHTML += "a++ = " + result + " (ahora 'a' vale " + a + ")<br />";
+
+    // 7. DECREMENTO (--)
+    // b-- reduce el valor de 'b' en 1 (pasa de 10 a 9).
+    result = b--;
+    contenedor.innerHTML += "b-- = " + result + " (ahora 'b' vale " + b + ")<br />";
+  </script>
+
+</body>
+</html>
