@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Sentencia if en JavaScript</title>
+    <style>
+        /* Un poco de estilo para que los resultados se vean mejor */
+        body { font-family: sans-serif; padding: 20px; }
+        #resultados { border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9; width: fit-content; margin-bottom: 15px;}
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor donde mostraremos el resultado de la condición -->
+    <div id="resultados"></div>
+
+    <p>Establece la variable a un valor diferente y luego prueba...</p>
+
+    <script>
+        // --- DECLARACIÓN DE VARIABLES ---
+        
+        // Declaramos la variable 'age' y le asignamos un valor de prueba.
+        // Usamos 'let' que es más moderno y seguro que 'var'.
+        let age = 20;
+
+        // Referencia al elemento HTML contenedor donde escribiremos el resultado
+        const contenedorResultados = document.getElementById('resultados');
+
+        // --- EXPLICACIÓN DE LA SENTENCIA if ---
+        // Sintaxis: if (condición) { // Código a ejecutar si la condición es verdadera }
+
+        // --- EVALUACIÓN DE LA CONDICIÓN ---
+        // Condición: ¿Es el valor de 'age' estrictamente mayor que 18? (¿20 > 18?)
+        
+        // Se ejecuta la operación lógica:
+        // Como 20 es mayor que 18, la condición es VERDADERA.
+        if( age > 18 ) {
+            // Este bloque de código SÓLO se ejecutará si la condición anterior es true.
+            
+            // En lugar de document.write(), usamos innerHTML para insertar contenido en un elemento específico.
+            // Insertamos el texto en negrita (usando <b></b>) dentro del contenedor.
+            contenedorResultados.innerHTML = "<b>Qualifies for driving</b>";
+        }
+        
+        // Si la condición hubiera sido FALSA (ej: age = 15), el código dentro de las llaves {} no se habría ejecutado
+        // y el contenedor de resultados habría quedado vacío.
+
+    </script>
+</body>
+</html>
